@@ -52,5 +52,6 @@ Table
 
 ------------
 
-자바스크립트 개발자라면 알아야 할 33가지 개념
+
+## 자바스크립트 개발자라면 알아야 할 33가지 개념
 [33concepts-of-javascript](https://velog.io/@jakeseo_me/series/33conceptsofjavascript)
