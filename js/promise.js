@@ -145,11 +145,51 @@ let response = await fetch('/article/promise-chaining/user.json');
 let user = await response.json();
 */
 
-(async() =>{
+/*(async() =>{
   let response = await fetch('/article/promise-chaining/user.json');
   let user = await response.json();
-})();
+})();*/
 
 // async 키워드는 2가지 효과를 가짐
 // 1. 언제나 promise를 반환
 // 2. 함수 내부에서 await을 사용할 수 있게 해줌
+
+
+
+
+
+
+/*
+var helloFunc = function() { 
+  console.log('Hello'); 
+}; 
+var name = 'J'; 
+var obj = { 
+  insideFunc: function() { 
+    console.log('객체 안에서 함수를 선언'); 
+  }, 
+  helloFunc: hello, 
+}; 
+
+obj[name + 'ook'] = '내이름'; 
+obj.insideFunc(); // (출력값) 객체 안에서 함수를 선언 
+obj.helloFunc(); // (출력값) Hello 
+console.log(obj.Jook); // (출력값) 내이름 
+*/
+
+//Es6
+
+// arrow function은 외부에 있던 this를 그대로 내부로 가져와서 사용하는 함수기 때문입니다. 
+//항상 장점은 아닙니다. 내가 예측하던 this값과 달라질 수도 있으니 단점이 될 수 있습니다.  
+const helloFunc = ()=> log('hello');
+const name2 = 'J'; 
+const obj = { 
+  insideFunc() { 
+    log('객체 안에서 함수를 선언'); 
+  }, 
+  helloFunc, 
+  [name2 + 'ook']: '내이름', 
+}; 
+obj.insideFunc(); // (출력값) 객체 안에서 함수를 선언 
+obj.helloFunc(); // (출력값) Hello 
+console.log(obj.Jook); // (출력값) 내이름
